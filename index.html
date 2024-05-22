@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="w-75 mx-auto test rounded-4 my-4 text-white p-4">    
+        <h1 class="text-center">Crud system</h1>
+        <div class="m-3">
+            <label for="productNameInput">Product Name :</label>
+            <input oninput="validationName()" type="text" id="productNameInput"  class="form-control" >
+            <div class="alert alert-danger d-none" id="nameMessage">invalid please try aname start with one character capital to 8s characters small</div>
+        </div>
+        <div class="m-3">
+            <label for="productPriceInput">Product Price :</label>
+            <input oninput="validationPrice()" type="number" id="productPriceInput" class="form-control">
+            <div class="alert alert-danger d-none" id="priceMessage">invalid please try aprice of min 3 numbers to max 5 numbers</div>
+        </div>
+        <div class="m-3">
+            <label for="productCategoryInput">Product Category :</label>
+            <input oninput="validationCategory()" type="text" id="productCategoryInput" class="form-control">
+            <div class="alert alert-danger d-none" id="categoryMessage">invalid please tey small characters from min 5 to max8</div>
+        </div>
+        <div class="m-3">
+            <label for="productDescriptionInput">Product Description :</label>
+            <textarea oninput="validationDec()" id="productDescriptionInput" class="form-control"></textarea>
+            <div class="alert alert-danger d-none" id="DescriptionMessage">invalid please try small characters or from min 4 to max 20 </div>
+        </div>
+        <div  class="d-flex justify-content-center">
+            <button onclick="addProduct()"id="addBtn" class=" test-btn  m-3 w-75">Add Product</button>
+            <button onclick="updateProduct()" id="updateBtn" class="btn btn-primary m-3 w-75 d-none">Update Product</button>
+        </div>
+        <input oninput="search()" id="searchInput" type="search" class="form-control mb-3 w-50 mx-auto" placeholder="Search By Name....">
+        <table class="table text-center">
+            <thead>
+                <tr>    
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

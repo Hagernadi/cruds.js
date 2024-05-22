@@ -1,0 +1,15 @@
+
+.test{
+    background-color: rgba(224, 6, 115, 0.76);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   
+}
+
+.test-btn{
+    background-color: rgb(156, 5, 81);
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    
+}
